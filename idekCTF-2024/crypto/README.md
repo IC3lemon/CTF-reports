@@ -72,3 +72,7 @@ print(y)
 alpertroned = int("57629776445896163024735745086814515288454966100802334039751672315837361336412607584713634047210889596") + 1    # +1 because y = 13**(flag - 1)   alpertroned would be flag-1
 print(long_to_bytes(alpertroned))   # idek{charles_and_the_chocolate_factory!!!}
 ```
+
+## takeaways :
+- learnt that division in modular math = multiplying with `mod_inv`
+- learnt that z3 does solve mod equations (yes the z3 script worked as well, dhruti summon might not have been needed)
