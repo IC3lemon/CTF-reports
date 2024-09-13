@@ -254,7 +254,7 @@ https://www.youtube.com/watch?v=O5SeQxErXA4
 
 after a few hours, we ended up with this script 
 ```python
-from pwn import remote, xor
+from pwn import *
 from binascii import hexlify, unhexlify
 
 conn = remote('cbc.ctf.csaw.io', 9996)
