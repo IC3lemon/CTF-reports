@@ -243,7 +243,7 @@ Answering all questions gave the flag. \
 
 # CBC
 
-Given was an nc and the script for it. \
+Given was an nc , the script for it, and a ciphertext.
 ```python
 from Crypto.Util.Padding import pad, unpad
 from Crypto.Cipher import AES
