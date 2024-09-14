@@ -1,4 +1,4 @@
-# Obfuscation
+# Obfuscation [ unsolved ]
 
 crazy crazy chal. legit too much obfuscation. \
 So this is a VM chal. custom instructions exist. \
