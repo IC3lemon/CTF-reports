@@ -41,7 +41,7 @@ c1 = 13(c2 - y) + 37y (mod p)
 ```
 this was where I got stuck, because division in mod math doesn't work \
 but dhruti came in and taught that \
-you can multiply with mod inv of 24 both sides to get rid of 24.
+you can multiply with mod inv of 24 both sides to get rid of 24. (OMG OFC FUCKING)
 ```
 
 24y * modinv(24,p) = (13c2 - c1) * modinv(24,p)  (mod p)
@@ -74,5 +74,5 @@ print(long_to_bytes(alpertroned))   # idek{charles_and_the_chocolate_factory!!!}
 ```
 
 ## takeaways :
-- learnt that division in modular math = multiplying with `mod_inv`
+- drilled into my head that division in modular math = multiplying with `mod_inv`
 - learnt that z3 does solve mod equations (yes the z3 script worked as well, dhruti summon might not have been needed)
