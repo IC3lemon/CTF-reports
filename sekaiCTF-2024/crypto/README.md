@@ -140,5 +140,5 @@ print(flag)
 
 
 ## takeaways : 
-- honestly this was well solvable. I fell down the rabbit hole of reversing python's system random.
+- honestly this was well solvable. I fell down the rabbit hole of reversing python's system random. Really should get a script on cryptobible for merseinne twister
 - do not be intimidated by random. Read the script better.
