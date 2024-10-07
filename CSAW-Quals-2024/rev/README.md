@@ -268,6 +268,7 @@ with open('input', 'wb') as f:
 
 ## takeaways :
 
-this was way beyond my current level. I could never have traced the instructions, and created a disassembler accordingly.
+this was way beyond my current level. I could never have traced the instructions, and created a disassembler accordingly. (maybe done it partially, but it still would've not been accurate)
+
 - should've gone deeper when we found the function filled with the bytes for the opcodes.
 - need to get better. more grind needed.
