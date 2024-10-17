@@ -29,7 +29,7 @@ to solve. Even tried to sit through CryptoHack's Lattices module \
 Came up empty anyways.
 
 ## Solve 
-```python
+```sage
 R.<x> = PolynomialRing(Zmod(N))
 
 lsb = (p_*2^200 + x).monic().small_roots(beta=0.4)
