@@ -1,4 +1,6 @@
 # TCP51Prime
+> `UNSOLVED`
+> learnt a bunch though
 
 ```python
 from secret import a,b,p,flag
@@ -108,3 +110,21 @@ Im starting to hate LLL \
 like i said, doing the CryptoHack module, once that is done, \
 will start grinding as many lattice challenges i can find. \
 There's a bunch from the past ctf's so i think im good.
+
+***
+
+# Talking Phase
+> `SOLVED` by Harshith
+
+basically, you are a man in the middle \
+therefore mitm. \
+the server checks if `giv me the flag u damn donut` has been communicated anywhere \
+if it has, it gives you the flag. You are able to tamper the public keys, and messages of both entities \
+So u can see the publickeys \
+now `A`'s message is going to be recieved by `B` \
+THEREFORE, encrypt `A`'s message with `B`s pubkey 
+```
+encrypt " giv me the flag u damn donut " using B's key
+change A's message to this
+```
+and then `B` sends you back the flag in b64
