@@ -37,7 +37,7 @@ p = p_*2^200 + lsb[0]
 
 assert is_prime(p)
 ```
-COPPERSMITHs attack for monic polynomials. is what you had to perform. \
+COPPERSMITHs attack for small roots of monic polynomials, is what you had to perform. \
 This does fall under lattices, so we were not far off. 
 
 ## Takeaways
