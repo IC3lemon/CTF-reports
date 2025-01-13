@@ -104,10 +104,10 @@ def find_dec(block):
                 ct_blocks[w][z] = dec_blocks[w][z] ^ (16 - y + 16*(3-x) + 1)
     return dec_blocks[3]
 
-dec3 = bytearray(b'+\x98n\x0eo\xc1\xf5\x19wS\xea \xef\x10u\xde') # find_dec(ct_blocks[3], ct_blocks)
-dec2 = bytearray(b'\xfb\x07\xac\xd9\x14o;\xa2\x1ae\xc3%\xee\x86w\xc5') # find_dec(strxor(dec3, target[3]), ct_blocks)
-dec1 = bytearray(b'S0ZQ\xc1O\xb3\x94\n\xe6\xec\xbb\x01F{\\') # find_dec(strxor(dec2, target[2]), ct_blocks)
-dec0 = bytearray(b'W\n-\xbd\x9f\xce\xe2\xfa\xdb(\xc6u`D\x04}') # find_dec(strxor(dec1, target[1]), ct_blocks)
+dec3 = bytearray(b'+\x98n\x0eo\xc1\xf5\x19wS\xea \xef\x10u\xde') # find_dec(ct_blocks[3])
+dec2 = bytearray(b'\xfb\x07\xac\xd9\x14o;\xa2\x1ae\xc3%\xee\x86w\xc5') # find_dec(strxor(dec3, target[3]))
+dec1 = bytearray(b'S0ZQ\xc1O\xb3\x94\n\xe6\xec\xbb\x01F{\\') # find_dec(strxor(dec2, target[2]))
+dec0 = bytearray(b'W\n-\xbd\x9f\xce\xe2\xfa\xdb(\xc6u`D\x04}') # find_dec(strxor(dec1, target[1]))
 
 payload = strxor(dec0, target_blocks[0]) + strxor(dec1, target_blocks[1]) + strxor(dec2, target_blocks[2]) + strxor(dec3, target_blocks[3]) + b'a'*16
 r.sendlineafter(b'choice: ', '2')
