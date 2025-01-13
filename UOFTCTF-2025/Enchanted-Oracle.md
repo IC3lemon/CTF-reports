@@ -56,8 +56,8 @@ We can use padding oracle attack to recover the dec blocks for a corresponding c
 below illustration explains it better \
 ![_cbc-attack-full-2](https://github.com/user-attachments/assets/42a14d6a-a075-4ec4-a93e-1e016b019aad)
 
-now if ur ciphertext is the dec block, at server side it will decrypt to `b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'` \
-Since `A ^ A = 0`. Therefore if our ciphertext block is `dec block ^ target block` at serverside `dec block ^ target block ^ dec block = target block`. \
+now if ur ciphertext is just `dec block`, at server side it will decrypt to `b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'` \
+Since `dec block ^ dec block = 0`. Therefore if our ciphertext block is `dec block ^ target block`, at serverside `dec block ^ target block ^ dec block = target block`. \
 Thus successfully forging the plaintext.<br><br>
 
 Solve script:
