@@ -61,7 +61,7 @@ Since `dec block ^ dec block = 0`. Therefore if our ciphertext block is `dec blo
 Thus successfully forging the plaintext.<br><br>
 
 Solve script:
-```
+```py
 from pwn import *
 from Crypto.Util.number import *
 from Crypto.Util.strxor import strxor
