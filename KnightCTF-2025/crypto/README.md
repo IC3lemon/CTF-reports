@@ -17,7 +17,7 @@ pls = [sum(charset.index(char) * (62 ** i) for i, char in enumerate(i[::-1])) fo
 print("".join(chr(x) for x in pls)) # KCTF{F14G_M4K3_YOU_H4ppY}
 ```
 
-## RSA
+## Random Senior Adleman
 ```py
 from Crypto.Util.number import *
 c = 4744275480125761149475439652189568532719997985297643024045625900665305682630452044004013647350658428069718952801828651333880186841289630294789054322237585
