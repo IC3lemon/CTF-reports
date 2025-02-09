@@ -45,6 +45,7 @@ break it this time
 
 ## Solve :
 We have  
+
 $$ K = (A p^2 - C p + D) d $$
 
 $$ K e = (A p^2 - C p + D) d e $$
