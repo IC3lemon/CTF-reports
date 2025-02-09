@@ -18,10 +18,10 @@ the string starting with `Salted_` suggests it was encrypted via a stream cipher
 But after probing a bit, teammates alerted that lagomorph is a Bunny, entire chall is centered around rabbits, \
 and ssure enough, there exists a `Rabbit Cipher` FUCKING RABBIT CIPHER. https://www.codeeeee.com/en/encrypt/rabbit.html \
 and yes it is a stream cipher. Now to figure out the passphrase for it. \
-tried bunny, rabbit, lagomorph everything. NUHUH guess what the password was.... \
-***`dennis`*** FUCKING DENNIS. ASS CHALLENGE. AND HOW DID I FIGURE THAT OUT ?? \
+tried bunny, rabbit, lagomorph everything. And guess what the password was.... \
+***`dennis`***  this is how I figured out dennis \
 ![image](https://github.com/user-attachments/assets/a9434a6d-f6ca-4f96-b866-f9d9ca7c6aa9) \
-PEAK CRYPTOGRAPHY GUYS.
+how was this a crypto chall even ?? It was more osint and guesswork.
 
 decrypted the rabbit cipher off of https://www.codeeeee.com/en/encrypt/rabbit.html \
 ![image](https://github.com/user-attachments/assets/534b7b48-30f1-4a18-93a5-790de35d24ac)
