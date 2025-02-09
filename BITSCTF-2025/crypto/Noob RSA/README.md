@@ -64,6 +64,7 @@ $$ K e \equiv A - C + D \pmod{p-1} $$
 $$ K e - A + C - D \equiv 0 \pmod{p-1} $$
 
 Thus:
+
 $$ K e - A + C - D = k (p-1) \quad \text{----- eqn (x)} $$
 
 This is where I was stuck on for a while, until my teammate swinged by and solved the rest
