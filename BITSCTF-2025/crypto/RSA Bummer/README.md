@@ -75,7 +75,7 @@ $$ lmao(a) + lmao(a+1) (a+1) \equiv 0 \pmod{n} $$
 so get two such values i.e 2 pairs of consecutive outputs of `lmao` \
 rearragnge them according to the above, and GCD both to get n
 
-$$ n \eq p r $$
+$$ n = p r $$
 
 and we have `pseudo_n` of the form `r * pow(e, p, q)` \
 GCD(pseudo_n, n) to get `r`
