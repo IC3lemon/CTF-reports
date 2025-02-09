@@ -140,10 +140,12 @@ then I had flashbacks to when I was bullied by crypto titans \
 
 so i then tried to compute nth root mod p \
 but my sage kept dying, was not able to do so.. Ultimately a teammate came by, did the same stuff \
-his sage worked, found the eth root mod p 
+his sage worked, found the eth root mod p, and he got the flag \
+![image](https://github.com/user-attachments/assets/24c595ef-cde1-454c-8ee8-572120d18052)
 
 ***
 
+## `upsolve`
 Post CTF i ran his script and realised, my sage.nth_root was indeed broken for whatever reason.  \
 ![image](https://github.com/user-attachments/assets/cafe192a-dc59-4bc8-bd5e-f103cb32acc4)
 
