@@ -210,4 +210,63 @@ while True:
         print(flag)
         break
 ```
-## `s0_fun_7o_50lv3_5ef78a03` # unwrapped
+
+EDIT : Found why my `sage.nth_root` wasn't working.  \
+It was because I had sagemath version9.5 and in all versions prior to 10.0 \
+`sage.nth_root` tries to factor p-1 where p is the field the root is being computed in \
+I scrapped my sagemath and installed from source again, here's my solve implemented via `sage.nth_root`
+```py
+from pwn import *
+from Crypto.Util.number import *
+from sage.all import *
+ct = [0, 0, 0]
+lmao = [0, 0, 0, 0]
+
+while True:
+    r = remote('chals.bitskrieg.in', 7001)
+    r.recvuntil(b'Pseudo_n = ')
+    pseudo_n = int(r.recvline().decode().strip())
+    r.recvuntil(b'e = ')
+    e = int(r.recvline().decode().strip())
+
+    for i in range(3):
+        r.recvuntil(b'Ciphertext ' + str(i+1).encode() + b' = ')
+        ct[i] = int(r.recvline().decode().strip())
+
+    j = 0
+    for i in range(3, 7):
+        r.sendlineafter(b'Enter your lucky number : ', str(i).encode())
+        r.recvuntil(b'Your lucky output :')
+        lmao[j] = int(r.recvline().decode().strip())
+        j += 1
+
+    print(f"")
+    # L(x) + L(x+1)*(x+1) = 0 (mod n)
+    n = GCD(lmao[2] + lmao[3] * 6, lmao[0] + lmao[1] * 4)
+    R = GCD(n, pseudo_n)
+
+    if not isPrime(R):
+        print("R NOT PRIME")
+        r.close()
+        continue
+
+    e = 27525540
+    p = n // R
+
+    if not isPrime(p):
+        print("P NOT PRIME")
+        r.close()
+        continue
+
+    flag = b''
+    for c in ct:
+        roots = GF(p)(c).nth_root(e, all=True)
+        flag += long_to_bytes(int(min(roots)))
+
+    r.close()
+    print(f"BITSCTF{{{flag.decode()}}}")
+    break
+```
+![image](https://github.com/user-attachments/assets/8db204d5-04ee-429e-ae7d-22a8adb0d8ae)
+
+## `BITSCTF{s0_fun_7o_50lv3_5ef78a03}`
